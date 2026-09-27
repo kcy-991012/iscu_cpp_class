@@ -60,29 +60,49 @@ int main() {
 }
 
 void printMenu() {
-    // TODO
+    std::cout << "<< Menu >>\n";
+    std::cout << "1. Americano - 3500 won\n";
+    std::cout << "2. Latte      - 5000 won\n";
+    std::cout << "3. Tea        - 4000 won\n";
+    std::cout << "0. Checkout\n\n";
 }
 
 int getMenuChoice() {
-    // TODO
-    return 0;  // TODO를 완성한 뒤 삭제
+    int menuNumber;
+
+    std::cout << "Select menu number: ";
+    std::cin >> menuNumber;
+
+    return menuNumber;
 }
 
 int getQuantity() {
-    // TODO
-    return 0;  // TODO를 완성한 뒤 삭제
+    int quantity;
+
+    std::cout << "Quantity: ";
+    std::cin >> quantity;
+
+    return quantity;
 }
 
 int getPrice(int menuNumber) {
-    // TODO
-    return 0;  // TODO를 완성한 뒤 삭제
+    switch (menuNumber) {
+    case 1:
+        return 3500;
+    case 2:
+        return 5000;
+    case 3:
+        return 4000;
+    default:
+        return 0;
+}
 }
 
 int calculateItemTotal(int price, int quantity) {
-    // TODO
-    return 0;  // TODO를 완성한 뒤 삭제
+    return price * quantity;
 }
 
 void printFinalTotal(int total) {
-    // TODO
+    std::cout << "\nFinal total: " << total << " won\n";
+    std::cout << "Thank you for visiting C++ Cafe!\n";
 }
