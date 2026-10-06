@@ -34,8 +34,7 @@ int main() {
             int quantity = getQuantity();
             
             for (int count = 0; count < quantity; count++) {
-                // TODO: 선택한 메뉴 번호를 cart에 추가
-                
+                cart.push_back(menuNumber);
             }
 
             switch (menuNumber) {
